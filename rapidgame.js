@@ -715,7 +715,7 @@ var startBuild = function(platform, callback, settings) {
 //
 var prebuildMac = function(platform, config, arch, callback) {
 	var i, j, k, dir, project, func, funcArg, derivedDir, dest,
-		sdks = (platform === "Mac" ? ["macosx"] : ["iphoneos", "iphonesimulator"]),
+		sdks = (platform === "Mac" ? ["maccatalyst"] : ["iphoneos", "iphonesimulator"]),
 		configs = (config ? [config] : (cmd.minimal ? ["Debug"] : ["Debug", "Release"])),
 		projs = [
 			path.join(cmd.src, "build", "cocos2d_libs.xcodeproj")
