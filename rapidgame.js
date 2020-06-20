@@ -821,8 +821,7 @@ var linkMac = function(configPlatform, callback) {
 		d = path.join(cmd.src, "build", configPlatform, "Build", "Products"),
 		files = [];
 	files = glob.sync(path.join(d, "**", "*.a"));
-	d = path.join(d, "
-");
+	d = path.join(d, "");
 	txt = files.join("\n") + "\n";
 	logBuild("Writing file list:\n  " + d + "\n    " + files.join("\n    "));
 	fs.writeFileSync(d, txt);
