@@ -802,9 +802,9 @@ var prebuildMac = function(platform, config, arch, callback) {
 				args = [
 					"-static",
 					"-o", dest,
-					"-filelist", path.join(dir, "list.txt")
+					"-filelist",
 					// this doesn't use derived data:
-					//   xcodebuild -project src/cocos2d-x/build/cocos2d_libs.xcodeproj -target "libcocos2d Mac" -showBuildSettings | grep BUILD_DIR
+					// xcodebuild -project src/cocos2d-x/build/cocos2d_libs.xcodeproj -target "libcocos2d Mac" -showBuildSettings | grep BUILD_DIR
 				];
 				builds.push([configs[i], command, dir, args, false, false]);
 			}
@@ -821,7 +821,8 @@ var linkMac = function(configPlatform, callback) {
 		d = path.join(cmd.src, "build", configPlatform, "Build", "Products"),
 		files = [];
 	files = glob.sync(path.join(d, "**", "*.a"));
-	d = path.join(d, "list.txt");
+	d = path.join(d, "
+");
 	txt = files.join("\n") + "\n";
 	logBuild("Writing file list:\n  " + d + "\n    " + files.join("\n    "));
 	fs.writeFileSync(d, txt);
