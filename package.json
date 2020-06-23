@@ -1,6 +1,6 @@
 {
   "name": "rapidgamekdl",
-  "version": "1.0.69",
+  "version": "1.0.691",
   "description": "A cross-platform commandline tool that prebuilds cocos2d-x libraries for Windows, Mac, Linux, Android and iOS. Also a game templating system.",
   "author": {
     "name": "Nathanael Weiss",
