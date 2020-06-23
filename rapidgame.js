@@ -802,7 +802,7 @@ var prebuildMac = function(platform, config, arch, callback) {
 				args = [
 					"-static",
 					"-o", dest,
-					//"-filelist",
+					"-filelist", dir+"/Debugtestfile.txt",
 					// this doesn't use derived data:
 					// xcodebuild -project src/cocos2d-x/build/cocos2d_libs.xcodeproj -target "libcocos2d Mac" -showBuildSettings | grep BUILD_DIR
 				];
