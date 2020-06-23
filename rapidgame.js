@@ -822,10 +822,10 @@ var linkMac = function(configPlatform, callback) {
 		files = [];
 	
 	logBuild("kdl write sf open path d val ", d);
-	logBuild("kdl x2... ");
+	logBuild("kdl x2... ",true);
 
 	files = glob.sync(path.join(d, "**", "*.a"));
-	logBuild("kdl x3... ");
+	logBuild("kdl x3... ",true);
 	d = path.join(d, "");
 	txt = files.join("\n") + "\n";
 	logBuild("Writing file list:\n  " + d + "\n    " + files.join("\n    "));
