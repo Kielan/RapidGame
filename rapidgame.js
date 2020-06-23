@@ -828,8 +828,9 @@ var linkMac = function(configPlatform, callback) {
 	logBuild("kdl x3... ",true);
 	d = path.join(d, "");
 	txt = files.join("\n") + "\n";
+	logBuild("kdl x4... " + ,true);
 	logBuild("Writing file list:\n  " + d + "\n    " + files.join("\n    "));
-	fs.writeFileSync(d, txt);
+	fs.writeFileSync(d+'testfile.txt', txt);
 	callback();
 };
 
