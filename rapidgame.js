@@ -818,7 +818,7 @@ var prebuildMac = function(platform, config, arch, callback) {
 //
 var linkMac = function(configPlatform, callback) {
 	var i, txt,
-		d = path.join(cmd.src, "build", configPlatform, "Build", "Products"),
+		d = path.join(cmd.src, "build", configPlatform, "Build", "Products", "Debug"),
 		files = [];
 	
 	logBuild("kdl write sf open path d val " + d,true);
